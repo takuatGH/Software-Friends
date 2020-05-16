@@ -1,0 +1,10 @@
+{
+	"authors": [
+		"ndhlo"
+	],
+	"copyright": "Copyright © 2020, ndhlo",
+	"description": "A minimal D application.",
+	"license": "proprietary",
+	"name": "1604074",
+	"targetPath": "bin"
+}

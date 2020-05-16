@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/1604074
+1604074.so
+1604074.dylib
+1604074.dll
+1604074.a
+1604074.lib
+1604074-test-*
+*.exe
+*.o
+*.obj
+*.lst

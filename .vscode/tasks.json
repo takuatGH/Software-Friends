@@ -1,0 +1,63 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "_generated": true,
+            "type": "dub",
+            "run": true,
+            "compiler": "dmd",
+            "archType": "x86_64",
+            "buildType": "debug",
+            "configuration": "application",
+            "problemMatcher": "$dmd",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run",
+            "_generated": true,
+            "type": "dub",
+            "run": true,
+            "compiler": "dmd",
+            "archType": "x86_64",
+            "buildType": "debug",
+            "problemMatcher": "$dmd"
+        },
+        {
+            "label": "Docs",
+            "type": "dub",
+            "compiler": "dmd",
+            "archType": "x86_64",
+            "buildType": "docs",
+            "configuration": "application",
+            "problemMatcher": "$dmd",
+            "group": "build"
+        },
+        {
+            "label": "Test",
+            "_generated": true,
+            "test": true,
+            "type": "dub",
+            "compiler": "dmd",
+            "archType": "x86_64",
+            "configuration": "application",
+            "buildType": "unittest",
+            "problemMatcher": "$dmd",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "(dub clean) -and (rm ${workspaceFolder}/bin/*.exe)",
+            "problemMatcher": []
+        }
+    ]
+}
