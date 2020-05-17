@@ -14,14 +14,21 @@ class Password
     {
         this.password = password;
     }
-
+    /** 
+ * Find the corresponding Password in a text file
+ * Params:
+ *   password = the inputted password it is looking for.
+ *   index = the position at which the username is first found.
+ * Returns: A Boolean confirming if a password match has been found.
+ */
     bool FindPassword(string password, int index_)
     in
     {
-        assert(index_ > 0, "The index of a stored password must be strictly positive.");
+        assert(index_ >= 0, "The index of a stored password must be strictly positive.");
         assert(password.length < 5, "A Password cannot be greater than 5 characters.");
         assert(password != " ", "A Password cannot be empty.");
-        assert(password.length > 3,"A Passord cannot be shorter than 3 characters.");
+        assert(password.length > 3,"A Password cannot be shorter than 3 characters.");
+        assert(isNumeric(password), "A Password must only contain numbers.");
     } 
     out
     {
@@ -31,19 +38,10 @@ class Password
     {
 
         int passIndex = 0;
-        // File file = File("passwords.txt", "w");
-        // file.writeln("1234\n4567\n8910");
-        // file.close();
-
         File file = File("passwords.txt", "r");
-        // writeln("Password Location: ", index_);
-        // writeln("Attempted Password: ", password);
         while(!file.eof())
         {
             string check_ = chomp(file.readln());
-            //passIndex = passIndex + 1;
-            //writeln("Current Location: ", passIndex);
-            //writeln("Current Password: ", check_);
             if(password == check_ && passIndex == (index_))
             {
                 writeln("Password Match Found");

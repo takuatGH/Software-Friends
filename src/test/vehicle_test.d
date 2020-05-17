@@ -39,6 +39,5 @@ unittest
 {
     auto testVehicle = new Vehicle(0);
     auto interest = testVehicle.compoundInterest(1005,1,1,1);
-    writeln(interest);
-    assert(interest == 1015.05);
+    assert(approxEqual(interest, 1015.05));
 }

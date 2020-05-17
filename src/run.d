@@ -56,7 +56,7 @@ class Run
         writeln("You current account has a balance of R", c, ".");
       }
       writeln(" ");
-      writeln("To invest in a simple interest account, press 'S', for compound press 'C' or 'E' to exit.");
+      writeln("To invest in a Simple Interest account, press 'S', for Compound Interest, press 'C' or 'E' to exit.");
       readf("%s\n", &response);
       Vehicle invest = new Vehicle(0);
       if (response == "S")
