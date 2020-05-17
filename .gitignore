@@ -9,7 +9,6 @@ docs/
 1604074.a
 1604074.lib
 1604074-test-*
-*.exe
 *.o
 *.obj
 *.lst
